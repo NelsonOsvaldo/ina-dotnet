@@ -3,8 +3,9 @@ on: push
 jobs:
   Compilacion:
     runs-on: windows-latest
+    environment: PRUEBAS
     steps:
-      - run: echo "El secreto Google es ${{ secrets.GOOGLE_TOKEN }}"
+      - run: echo "El secreto Google es ${{ secrets.SECRET_PRUEBA }}"
       - uses: actions/checkout@v2
       - name: Compilamos
         run: dotnet build
